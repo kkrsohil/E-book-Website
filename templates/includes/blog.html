@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  <title>Book-reader | www.bookreader.com</title>
+{% endblock title %}
+{% block content %}
+  {% include 'includes/header_footer/header.html' %}
+
+
+
+
+    <div class="" style="background-image: url({% static 'img/bg1.png' %}); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <section class="title container">
+            <div class="row">
+                <a href="{%url 'add_blog'%}" class="btn btn-outline-dark w-25 me-auto">Add Blogs</a>
+                <div class="col-md-12">
+                    <h1>OUR Blog</h1>
+                    <div class="seperator"></div>
+                    <p>Read Our blogs For Know More about our Services.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Blog Layout -->
+        <div class="container">
+            <div class="row">
+                {% for data in  blog_data %}
+                <div class="col-md-6 item">
+                    <div class="item-in">
+                        <h4 class="text-upper">{{data.user_name}}</h4>
+                        <div class="seperator"></div>
+                        <p>{{data.blog_msg}}</p>
+                        <a href="{{data.blog_link}}" target="_blank">Read More
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+                
+        </div>
+    </div>
+    <!-- swiper slider vertical-->
+    <div class="page-6 my-5">
+        <div class="container">
+            <div class="row">
+                <h1 class="fw-bold text-center mt-5 " style="color: var(--font-color);">Authors Love Us</h1>
+                <p class="text-center fw-semibold fs-6 px-5">We are proud to have some of the happiest customers in
+                    the business. Take a look
+                    at some of the feedback our customers have left for us.</p>
+                <div class="col-lg-6 mt-5">
+                    <div class=" px-5">
+                        <img src="{% static 'img/books.jpg' %}" alt="img" class="img-fluid" data-aos="zoom-in"
+                            data-aos-duration="1000">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-5">
+                    <!-- Swiper -->
+                    <div class="swiper vertical_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <h2 class="text-start fw-bold">Joseph O. Edwards</h2>
+                                    <p class="text-start">Poet, Lyricist and Public speaker who resides in Canada
+                                    </p>
+                                    <h4 class="text-start pt-3 fw-semibold">Thanks eBook designer, the book was
+                                        published with
+                                        the new cover when I checked this morning. I will be
+                                        working with you on more projects soon. You are fast
+                                        and precise. I like that you are a master at what you
+                                        do. Keep up the great work in making authors
+                                        dreams come to life one paper in proper
+                                        measurements.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <h2 class="text-start fw-bold">Joseph O. Edwards</h2>
+                                    <p class="text-start">Poet, Lyricist and Public speaker who resides in Canada
+                                    </p>
+                                    <h4 class="text-start pt-3 fw-semibold">Thanks eBook designer, the book was
+                                        published with
+                                        the new cover when I checked this morning. I will be
+                                        working with you on more projects soon. You are fast
+                                        and precise. I like that you are a master at what you
+                                        do. Keep up the great work in making authors
+                                        dreams come to life one paper in proper
+                                        measurements.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <h2 class="text-start fw-bold">Joseph O. Edwards</h2>
+                                    <p class="text-start">Poet, Lyricist and Public speaker who resides in Canada
+                                    </p>
+                                    <h4 class="text-start pt-3 fw-semibold">Thanks eBook designer, the book was
+                                        published with
+                                        the new cover when I checked this morning. I will be
+                                        working with you on more projects soon. You are fast
+                                        and precise. I like that you are a master at what you
+                                        do. Keep up the great work in making authors
+                                        dreams come to life one paper in proper
+                                        measurements.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- swiper slider vertical -->
+
+
+    <!-- sliedr logi -->
+    <div class="page-7">
+        <div class="swiper sliedr">
+          <div class="swiper-wrapper align-items-center justify-content-center">
+            <div class="swiper-slide">
+              <div class="card-slide px-3" style="width: 20rem;">
+                <img class="card-img-center" src="{% static 'img/amazone_kindle.png' %}" alt="Card image" />
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="card-slide px-3" style="width: 20rem;">
+                <img class="card-img-center img-fluid" src="{% static 'img/draft.png' %}" alt="Card image" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-slide px-3" style="width: 20rem;">
+                <img class="card-img-center" src="{% static 'img/ingram-1.png' %}" alt="Card image" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-slide px-3" style="width: 20rem;">
+                <img class="card-img-center" src="{% static 'img/draft.png' %}" alt="Card image" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-slide px-3" style="width: 20rem;">
+                <img class="card-img-center" src="{% static 'img/amazone_kindle.png' %}" alt="Card image" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    <!-- swiper slider logo -->
+
+    {% include 'includes/header_footer/footer.html' %}
+    {% endblock content %}
+
+
+
+  

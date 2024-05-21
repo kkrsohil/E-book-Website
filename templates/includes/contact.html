@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  <title>Book-reader | www.bookreader.com</title>
+{% endblock %}
+
+{% block content %}
+  {% include 'includes/header_footer/header.html' %}
+
+  <section id="contact">
+    <h1 class="section-header bg-dark">Contact</h1>
+
+    <div class="contact-wrapper my-5">
+      <!-- Left contact page -->
+
+      <form id="contact-form" class="form-horizontal" role="form" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required />
+          </div>
+        </div>
+
+        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
+        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+          <div class="alt-send-button">
+            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          </div>
+        </button>
+      </form>
+
+      <!-- Left contact page -->
+
+      <div class="direct-contact-container">
+        <ul class="contact-list">
+          <li class="list-item">
+            <i class="fa fa-map-marker text-dark fa-2x"></i><span class="contact-text text-dark">City, State</span>
+          </li>
+
+          <li class="list-item">
+            <i class="fa fa-phone text-dark fa-2x"></i><span class="contact-text text-dark"><a href="tel:1-212-555-5555" title="Give me a call" class="text-dark">+91 8766350681</a></span>
+          </li>
+
+          <li class="list-item">
+            <i class="fa fa-envelope text-dark fa-2x"></i><span class="contact-text text-dark"><a href="mailto:#" class="text-dark ms-2" title="Send me an email">sohil123@gmail.com</a></span>
+          </li>
+        </ul>
+
+        <hr />
+        <ul class="social-media-list">
+          <li>
+            <a href="#" target="_blank" class="contact-icon"><i class="fa-brands fa-github"></i></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="contact-icon"><i class="fa-brands fa-codepen"></i></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="contact-icon"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="contact-icon"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+  </section>
+
+  {% include 'includes/header_footer/footer.html' %}
+{% endblock %}
